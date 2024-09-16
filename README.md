@@ -13,4 +13,4 @@ Docker image is hosted in public repo
 
 ![alt text](browser-screenshot.png)
 
-# Note: This setup is done and tested using Minikube locally.
+# Note: This setup is done and tested using Minikube locally, Minikube tunnel is used to generate the externalIP for LoadBalancer.
