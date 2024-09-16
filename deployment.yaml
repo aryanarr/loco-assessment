@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loco-assessment
+  labels:
+    app: loco-assessment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: loco-assessment
+  template:
+    metadata:
+      labels:
+        app: loco-assessment
+    spec:
+      containers:
+      - name: loco-assessment
+        image: aryanarr/loco_assessment:1.0
+        resources:
+          requests:
+            memory: "10Mi"
+            cpu: "5m"
+          limits:
+            memory: "50Mi"
+            cpu: "10m"
+        ports:
+          - containerPort: 80
